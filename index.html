@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wafi Hassan - Software Developer Portfolio. Explore my projects, skills, and experience.">
-    <title>Wafi Hassan | Software QA/Developer</title>
+    <meta name="description" content="Wafi Hassan - Software developer focused on backend and QA automation. Two terms of SQA at Philips, C# xUnit API tests, and a full-stack uptime monitor with a 62-test suite in CI.">
+    <title>Wafi Hassan | Software Developer &amp; QA Automation</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wafihassan.ca/">
+    <meta property="og:title" content="Wafi Hassan | Software Developer &amp; QA Automation">
+    <meta property="og:description" content="Computer Science grad with two terms of SQA at Philips. Open to software developer, SDET, and QA automation roles.">
+    <meta property="og:image" content="https://wafihassan.ca/uptime-monitor.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,6 +18,10 @@
     <script>
         tailwind.config = {
             darkMode: 'class',
+            // Only apply hover: styles on devices with a mouse, so links work on the first tap on phones
+            future: {
+                hoverOnlyWhenSupported: true,
+            },
             theme: {
                 extend: {
                     colors: {
@@ -80,19 +90,19 @@
             transition: all 0.3s ease;
         }
         
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        
         .project-card {
             transition: all 0.3s ease;
             overflow: hidden;
         }
-        
+
         /* Only lift cards on devices with a real hover (mouse), so taps on
            touch screens don't need two presses to follow a link */
         @media (hover: hover) {
+            .skill-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+
             .project-card:hover {
                 transform: translateY(-8px);
                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -154,6 +164,7 @@
             </a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">About</a>
+                <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Experience</a>
                 <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Skills</a>
                 <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Projects</a>
                 <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
@@ -175,11 +186,17 @@
                 Hi, I'm <span class="gradient-text">Wafi Hassan</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4 animate-slide-up" style="animation-delay: 0.2s;">
-                Software QA/Developer
+                Software Developer · QA Automation &amp; Backend
             </p>
-            <p class="text-lg md:text-xl text-gray-500 dark:text-gray-500 mb-12 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.4s;">
-                Passionate about building innovative solutions and creating exceptional digital experiences
+            <p class="text-lg md:text-xl text-gray-500 dark:text-gray-500 mb-6 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.4s;">
+                I build backend services and the automated tests that keep them reliable, from C# API tests at Philips to a full-stack app with a 62-test suite in CI.
             </p>
+            <div class="mb-12 animate-slide-up" style="animation-delay: 0.5s;">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                    Open to software developer, SDET &amp; QA automation roles
+                </span>
+            </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s;">
                 <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all shadow-lg hover:shadow-xl">
                     <i class="fas fa-download mr-2"></i>Download Resume
@@ -214,16 +231,13 @@
                         </div>
                         <div class="flex-1">
                             <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                                I'm a Computer Science student at the University of Windsor, currently pursuing my Bachelor of Science degree with an expected graduation in December 2025. My academic journey has been marked by excellence, earning a place on the Faculty of Science Dean's Honour Roll in 2021.
+                                I graduated from the University of Windsor in December 2025 with a Bachelor of Science in Computer Science, and made the Faculty of Science Dean's Honour Roll in 2021.
                             </p>
                             <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                                I've gained valuable industry experience as a Software Tester Intern at Philips, where I worked with the Ultrasound Reacts SQA team. During my two terms, I expanded from manual testing to automation QA, setting up local testing environments and developing automated test scripts using C# and xUnit. I collaborated closely with developers and product managers, executing test cases in TestRail and managing bug tracking through Jira to ensure high-quality software releases.
-                            </p>
-                            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                                My technical expertise spans multiple programming languages including Java, Python, C#, and JavaScript, along with frameworks like React.js and Node.js. I'm passionate about building innovative solutions, from machine learning applications to full-stack web development. I approach every project with attention to detail, a focus on user experience, and a commitment to writing clean, maintainable code.
+                                I spent two internship terms on the Ultrasound Reacts SQA team at Philips. I started out running manual regression suites in TestRail, and in my second term moved into automation, writing C# xUnit tests that validate REST API behavior, including role-based access control.
                             </p>
                             <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                                When I'm not coding or studying, I enjoy exploring new technologies, working on personal projects, and staying current with the latest industry trends. I'm always eager to take on new challenges and contribute to meaningful software solutions.
+                                Outside of work I build full-stack projects with real test suites behind them, like my <a href="#projects" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Uptime Monitor</a>. I'm looking for software developer, backend, SDET, or QA automation roles where I can keep doing both: writing code and making sure it works.
                             </p>
                             <div class="mt-6 flex items-center gap-4">
                                 <a href="https://www.linkedin.com/in/whassan03/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors">
@@ -238,76 +252,183 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+                <span class="gradient-text">Experience</span>
+            </h2>
+            <div class="section-divider w-24 mx-auto mb-16"></div>
+            <div class="max-w-3xl mx-auto">
+                <ol class="relative border-l-2 border-blue-200 dark:border-blue-900 ml-3 space-y-10">
+                    <li class="pl-8 relative">
+                        <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 border-4 border-white dark:border-gray-950"></span>
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Software Developer/Tester Intern</h3>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Apr 2025 – Dec 2025</span>
+                            </div>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold mb-4">Philips · Ultrasound Reacts SQA · Remote</p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                                <li>Returned for a second term and moved from manual testing into automation and backend API validation</li>
+                                <li>Wrote and ran C# xUnit tests validating REST API request handling, response validation, and role-based access control</li>
+                                <li>Set up and maintained a local automation environment in JetBrains Rider for test execution and debugging</li>
+                                <li>Completed and closed 15+ UAT tests in Jira, validating server enhancements and bug fixes before release</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">C#</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">xUnit</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">REST APIs</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">TestRail</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Jira</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pl-8 relative">
+                        <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 border-4 border-white dark:border-gray-950"></span>
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6">
+                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Software Tester Intern</h3>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Jun 2024 – Dec 2024</span>
+                            </div>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold mb-4">Philips · Ultrasound Reacts SQA · Remote</p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                                <li>Tested Reacts, a healthcare video conferencing app serving 200+ clinics, hospitals, and customers</li>
+                                <li>Wrote and edited test cases in TestRail and ran 100+ manual tests against each sprint's release candidate</li>
+                                <li>Reported and tracked defects in Jira and worked with developers and product managers on new features and blockers</li>
+                                <li>Triggered server stack deployments to staging via AWS on developer commits to support continuous integration</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Manual Testing</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">TestRail</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Jira</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">AWS</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Agile</span>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="py-20">
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
                 My <span class="gradient-text">Skills</span>
             </h2>
             <div class="section-divider w-24 mx-auto mb-16"></div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">JavaScript</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="skill-card md:col-span-2 bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-vial-circle-check text-2xl text-green-500"></i>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Testing &amp; QA</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">xUnit</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Playwright</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Vitest</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Supertest</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">TestRail</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Jira</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">API Testing</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Regression &amp; UAT</span>
+                    </div>
                 </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-java text-4xl text-orange-500 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">Java</p>
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-code text-2xl text-blue-500"></i>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">C#</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Java</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">C</span>
+                    </div>
                 </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-node-js text-4xl text-green-500 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">Node.js</p>
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-server text-2xl text-purple-500"></i>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Backend &amp; Web</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Express</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">REST APIs</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">PHP</span>
+                    </div>
                 </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-python text-4xl text-blue-500 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">Python</p>
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-database text-2xl text-orange-500"></i>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">MS SQL</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">MySQL</span>
+                    </div>
                 </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-css3-alt text-4xl text-blue-400 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">CSS</p>
-                </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-html5 text-4xl text-orange-400 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">HTML</p>
-                </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fab fa-git-alt text-4xl text-red-500 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">Git</p>
-                </div>
-                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border border-gray-200 dark:border-gray-700">
-                    <i class="fas fa-database text-4xl text-blue-600 mb-3"></i>
-                    <p class="font-semibold text-gray-900 dark:text-gray-100">MySQL</p>
+                <div class="skill-card bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-screwdriver-wrench text-2xl text-red-500"></i>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">GitHub Actions</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">JetBrains Rider</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">VS Code</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
                 Featured <span class="gradient-text">Projects</span>
             </h2>
             <div class="section-divider w-24 mx-auto mb-16"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                    <div class="project-image-container overflow-hidden">
-                        <div class="project-image bg-gradient-to-br from-indigo-500 to-pink-500 h-48 flex items-center justify-center">
-                            <i class="fas fa-heartbeat text-6xl text-white opacity-50"></i>
-                        </div>
+                <div class="project-card md:col-span-2 lg:col-span-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden lg:flex">
+                    <div class="project-image-container overflow-hidden lg:w-1/2 bg-gradient-to-br from-indigo-500 to-pink-500 p-6 flex items-center">
+                        <img src="uptime-monitor.png" alt="Uptime Monitor dashboard showing three monitored sites, two up and one down" class="project-image w-full rounded-lg shadow-2xl">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">Uptime Monitor</h3>
+                    <div class="p-6 lg:p-8 lg:w-1/2 flex flex-col">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Uptime Monitor</h3>
+                            <span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold uppercase tracking-wide">Featured</span>
+                        </div>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                            A self-hosted uptime monitor that pings URLs on a schedule, logs response times to Postgres, charts them on a React dashboard, and emails you when a site goes down. Backed by 62 unit, integration, and E2E tests running in CI.
+                            A self-hosted uptime monitor that pings URLs on a schedule, logs response times to Postgres, charts them on a React dashboard, and emails you once when a site goes down.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
+                        <ul class="space-y-2 mb-5 text-gray-700 dark:text-gray-300 text-sm">
+                            <li class="flex gap-2"><i class="fas fa-check text-green-500 mt-1"></i><span><strong>62-test pyramid:</strong> Vitest unit, Supertest API integration, and Playwright E2E tests</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Dependency-injected HTTP and SMTP clients so unit tests run offline</span></li>
+                            <li class="flex gap-2"><i class="fas fa-check text-green-500 mt-1"></i><span>Transactional log writes and up→down alerting, so one outage sends one email</span></li>
+                        </ul>
+                        <a href="https://github.com/Wafinator/Uptime-Monitor/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer" class="inline-block mb-5">
+                            <img src="https://github.com/Wafinator/Uptime-Monitor/actions/workflows/ci.yml/badge.svg" alt="CI status" class="h-5">
+                        </a>
+                        <div class="flex flex-wrap gap-2 mb-6">
                             <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Node.js / Express</span>
                             <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">PostgreSQL</span>
                             <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm">Playwright</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">Vitest</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">GitHub Actions</span>
                         </div>
-                        <a href="https://github.com/Wafinator/Uptime-Monitor" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                        <a href="https://github.com/Wafinator/Uptime-Monitor" target="_blank" rel="noopener noreferrer" class="mt-auto block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
                         </a>
                     </div>
@@ -322,11 +443,11 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">Banking Application</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                            A comprehensive banking application with secure transaction processing, account management, and real-time balance updates.
+                            A Java banking app backed by a MySQL database. Users log in to deposit, withdraw, transfer funds between accounts, and review their past transactions.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Java</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">SQL</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">MySQL</span>
                         </div>
                         <a href="https://github.com/Wafinator/Banking-Application" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
@@ -343,7 +464,7 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">SkyPalette</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                            A weather application that uses the OpenWeatherMap API to display real-time temperature, visibility, humidity, and other weather statistics for any location.
+                            A weather application that uses the OpenWeatherMap API to display real-time temperature, humidity, wind speed, and other conditions for any location.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">JavaScript</span>
@@ -365,11 +486,11 @@
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">NoteSwift</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                            A fast and intuitive note-taking application with markdown support, cloud sync, and advanced search capabilities.
+                            A lightweight browser note-taking app built with vanilla JavaScript. Create and delete notes, which are saved automatically to local storage so they persist between visits.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">JavaScript</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Local Storage</span>
                         </div>
                         <a href="https://github.com/Wafinator/Notes-App" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
@@ -388,7 +509,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
                 Get In <span class="gradient-text">Touch</span>

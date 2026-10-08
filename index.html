@@ -90,13 +90,17 @@
             overflow: hidden;
         }
         
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        
-        .project-card:hover .project-image {
-            transform: scale(1.1);
+        /* Only lift cards on devices with a real hover (mouse), so taps on
+           touch screens don't need two presses to follow a link */
+        @media (hover: hover) {
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            .project-card:hover .project-image {
+                transform: scale(1.1);
+            }
         }
         
         .project-image {
@@ -288,6 +292,29 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
                     <div class="project-image-container overflow-hidden">
+                        <div class="project-image bg-gradient-to-br from-indigo-500 to-pink-500 h-48 flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-6xl text-white opacity-50"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">Uptime Monitor</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                            A self-hosted uptime monitor that pings URLs on a schedule, logs response times to Postgres, charts them on a React dashboard, and emails you when a site goes down. Backed by 62 unit, integration, and E2E tests running in CI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm">Playwright</span>
+                        </div>
+                        <a href="https://github.com/Wafinator/Uptime-Monitor" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-image-container overflow-hidden">
                         <div class="project-image bg-gradient-to-br from-blue-500 to-purple-600 h-48 flex items-center justify-center">
                             <i class="fas fa-university text-6xl text-white opacity-50"></i>
                         </div>
@@ -301,9 +328,9 @@
                             <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Java</span>
                             <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">SQL</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                        <a href="https://github.com/Wafinator/Banking-Application" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
-                        </button>
+                        </a>
                     </div>
                 </div>
                 
@@ -323,9 +350,9 @@
                             <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">CSS</span>
                             <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">API</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                        <a href="https://github.com/Wafinator/WeatherApplication" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
-                        </button>
+                        </a>
                     </div>
                 </div>
                 
@@ -344,9 +371,9 @@
                             <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">JavaScript</span>
                             <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Node.js</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
+                        <a href="https://github.com/Wafinator/Notes-App" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all">
                             View Project
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
